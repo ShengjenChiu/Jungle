@@ -23,8 +23,9 @@
 
       <tbody>
 
-        <% enhanced_cart.each do |i| %>
-          <%= render 'order', product: i[:product], quantity: i[:quantity].to_i %>
+        <% @order.line_items.each do |i| %>
+
+          <%= render 'order', product: i.product, quantity: i.quantity.to_i %>
         <% end %>
 
       </tbody>
