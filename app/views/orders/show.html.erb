@@ -20,15 +20,11 @@
           <th>Price</th>
         </tr>
       </thead>
-
       <tbody>
-
         <% enhanced_cart.each do |i| %>
           <%= render 'order', product: i[:product], quantity: i[:quantity].to_i %>
-        <% end %>
-
+        <% end %>  
       </tbody>
-
       <tfoot>
         <tr>
           <th colspan="4">
