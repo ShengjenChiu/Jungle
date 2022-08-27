@@ -1,9 +1,7 @@
 Rails.application.routes.draw do
 
   namespace :admin do
-    get 'categories/index'
-    get 'categories/new'
-    get 'categories/create'
+    resources :categories, only: [:index, :create, :new]
   end
 
   get 'about/index'

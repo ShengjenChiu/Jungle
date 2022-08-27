@@ -2,7 +2,7 @@ class Admin::CategoriesController < ApplicationController
   http_basic_authenticate_with name: ENV['username'], password: ENV['password']
 
   def index
-    @category = Category.all
+    @categories = Category.all
   end
 
   def new

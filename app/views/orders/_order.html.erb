@@ -1,21 +1,21 @@
 <tr>
   <td>
-    <%= image_tag @order.line_items.product.image.tiny.url %>
+    <%= image_tag product.image.tiny.url %>
   </td>
   <td>
-    <h4><%= @order.line_items.product.name %></h4>
+    <h4><%= product.name %></h4>
     <br>
-    <p><%= @order.line_items.product.description %></p>
+    <p><%= product.description %></p>
   </td>
   <td>
-    $<%= @order.line_item.product.price %>
+    $<%= product.price %>
   </td>
   <td>
-  <div>
-    <%= @order.line_item.quantity %>
-  </div>
+    <div>
+    <%= quantity %>
+    </div>
   </td>
   <td>
-    $<%= @order.line_item.product.price * @order.line_item.quantity %>
+    $<%= product.price * quantity %>
   </td>
 </tr>
