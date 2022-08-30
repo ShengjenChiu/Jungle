@@ -36,10 +36,29 @@ RSpec.describe User, type: :model do
       @user.save
     end
 
-    # examples for the class method here
-    it "" do
-      
-    end
+    # it "takes emaill address and password as arguments" do
+    #   expect(@user.email).to be_valid
+    #   expect(@user.password).to be_valid
+    # end
+
+    # it "return an instance of user if successful authenticated" do
+    #   expect(authenticate_with_credentials).success.to be @user
+    # end
+
+    # it "return nil if not authenticated" do
+    #   expect(authenticate_with_credentials).fail.to be nil
+    # end
+
+    # # edge case 1
+    # it "spaces in the front and back of the email should be success" do
+    #   expect(authenticate_with_credentials).fail.to be nil
+    # end
+
+    # # edge case 2
+    # it "wrong case of email should be sucess" do
+    #   expect(authenticate_with_credentials).fail.to be nil
+    # end
+
   end
 end
 

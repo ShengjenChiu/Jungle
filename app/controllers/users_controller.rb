@@ -11,14 +11,6 @@ class UsersController < ApplicationController
       redirect_to '/signup'
     end
 
-    # if user = User.authenticate_with_credentials(user_params)
-    #   # success logic, log them in
-    #   session[:user_id] = user.id
-    #   redirect_to '/'
-    # else
-    #   # failure, render login form
-    #   redirect_to '/signup'
-    # end
   end
   
   private
