@@ -17,7 +17,6 @@ RSpec.describe User, type: :model do
       expect(@user2.password).not_to be(@user2.password_confirmation)
     end
 
-    # this logic is not correct=> to be modified!!!
     it "Email are case insensitive: email must be unique." do
       @user3 = User.new(first_name: 'Lightning', last_name: 'McQueen', email: 'HH@gmail.Com', password: '3456', password_confirmation: '3456')
 
@@ -30,17 +29,41 @@ RSpec.describe User, type: :model do
     end 
   end  
 
+
   describe '.authenticate_with_credentials' do
     before(:each) do
       @user = User.new(first_name: 'Hundson', last_name: 'Hornet', email: 'hh@gmail.com', password: '1234', password_confirmation: '1234')
+
       @user.save
+      @user.validate
+
     end
 
-    # examples for the class method here
-    it "" do
-      
+    it "return an instance of user if successful authenticated" do
+      expect(User.authenticate_with_credentials(@user.email, @user.password)).not_to be_valid
     end
+
+    it "return nil if not authenticated" do
+      @user2 = User.new(first_name: 'Parson', last_name: 'Worley', email: 'hH@Gmail.Com', password: '3456', password_confirmation: '3456')
+
+      expect(User.authenticate_with_credentials(@user2.email, @user2.password)).to be nil
+    end
+
+    # edge case 1
+    it "spaces in the front and back of the email should be successfully login as well." do
+      @user3 = User.new(first_name: 'Sam', last_name: 'Han', email: 'jj@gmail.com', password: '7890', password_confirmation: '7890')
+
+      expect(User.authenticate_with_credentials(" #{@user3.email}    ", @user3.password)).to be nil
+    end
+
+    # edge case 2
+    it "wrong case of email address should be sucessfully login too." do
+      @user4 = User.new(first_name: 'Tarah', last_name: 'Nan', email: 'tn@gmail.com', password: '2345', password_confirmation: '2345')
+      
+      wrong_case_email = 'Tn@gMAil.coM'
+
+      expect(User.authenticate_with_credentials(wrong_case_email, @user4.password)).to be nil
+    end
+
   end
 end
-
-
