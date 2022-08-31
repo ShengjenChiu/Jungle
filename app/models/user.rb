@@ -3,7 +3,7 @@ class User < ApplicationRecord
 
   # Validation of password and email
   validates :password, confirmation: true, length: { minimum: 4 }, on: :create
-  validates :password_confirmation, presence: true
+  # validates :password_confirmation, presence: true
   validates :email, presence: true, uniqueness: { case_sensitive: false }, on: :create
   validates :first_name, :last_name, presence: true
     
@@ -13,8 +13,12 @@ class User < ApplicationRecord
   # class method of authentication
   def self.authenticate_with_credentials(email, password)
     #the authenticate instance method of the has_secure_password gem
-    self.find_by(email: 'email', password: 'password')
-
+    @user = self.find_by(email: email)
+    if @user && @user.authenticate(password)
+      return @user
+    else
+      return nil
+    end
   end
 
 

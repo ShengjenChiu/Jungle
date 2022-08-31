@@ -30,16 +30,18 @@ RSpec.describe User, type: :model do
     end 
   end  
 
+
   describe '.authenticate_with_credentials' do
     before(:each) do
       @user = User.new(first_name: 'Hundson', last_name: 'Hornet', email: 'hh@gmail.com', password: '1234', password_confirmation: '1234')
       @user.save
+      @user.validate
+
     end
 
-    # it "takes emaill address and password as arguments" do
-    #   expect(@user.email).to be_valid
-    #   expect(@user.password).to be_valid
-    # end
+    it "takes emaill address and password as arguments" do
+      expect(User.authenticate_with_credentials(@user.email, @user.password)).to be_valid
+    end
 
     # it "return an instance of user if successful authenticated" do
     #   expect(authenticate_with_credentials).success.to be @user
