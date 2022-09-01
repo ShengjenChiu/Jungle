@@ -32,9 +32,9 @@ More information in their docs: <https://stripe.com/docs/testing#cards>
 
 ## Final Product
 
-!["Screenshot of the Home Page of the Jungle: upper portion"]()
-!["Screenshot of the Home Page of the Jungle: products portion"]()
-!["Screenshot of the User Authentication: Sign Up"]()
-!["Screenshot of the User Authentication: Login In"]()
-!["Screenshot of the Order Detail Page"]()
-!["Screenshot of the Sold Out Badge"]()
+!["Screenshot of the Home Page of the Jungle: upper portion"](https://github.com/ShengjenChiu/Jungle/blob/master/docs/HomePage.png)
+!["Screenshot of the Home Page of the Jungle: products portion"](https://github.com/ShengjenChiu/Jungle/blob/master/docs/Products.png)
+!["Screenshot of the User Authentication: Sign Up"](https://github.com/ShengjenChiu/Jungle/blob/master/docs/SignupPage.png)
+!["Screenshot of the User Authentication: Login In"](https://github.com/ShengjenChiu/Jungle/blob/master/docs/LoginPage.png)
+!["Screenshot of the Order Detail Page"](https://github.com/ShengjenChiu/Jungle/blob/master/docs/ProductDetail.png)
+!["Screenshot of the Sold Out Badge"](https://github.com/ShengjenChiu/Jungle/blob/master/docs/SoldOutBadge.png)
