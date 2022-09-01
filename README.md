@@ -19,7 +19,7 @@ If Rails is complaining about authentication to the database, uncomment the user
 
 ## Stripe Testing
 
-Use Credit Card # 4111 1111 1111 1111 for testing success scenarios.
+Use Credit Card # 4242424242424242 for testing success scenarios.
 
 More information in their docs: <https://stripe.com/docs/testing#cards>
 
@@ -29,3 +29,12 @@ More information in their docs: <https://stripe.com/docs/testing#cards>
 - Bootstrap 5
 - PostgreSQL 9.x
 - Stripe
+
+## Final Product
+
+!["Screenshot of the Home Page of the Jungle: upper portion"]()
+!["Screenshot of the Home Page of the Jungle: products portion"]()
+!["Screenshot of the User Authentication: Sign Up"]()
+!["Screenshot of the User Authentication: Login In"]()
+!["Screenshot of the Order Detail Page"]()
+!["Screenshot of the Sold Out Badge"]()
