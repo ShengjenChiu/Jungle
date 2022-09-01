@@ -11,10 +11,6 @@ describe('products_details', () => {
       .should("be.visible")
       .click();
 
-    // cy.get('.button_to .btn-cart_add')
-    //   .should("be.visible")
-    //   .click();
-
     cy.get('.products-show')
       .should("be.visible")
     
